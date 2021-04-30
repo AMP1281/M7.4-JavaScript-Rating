@@ -1,15 +1,17 @@
+
 // 3) Al moure el mouse sobre un element, que canvii els cotlors a tots els seus anteriors. Si per exemple es posa el mouse a la tercera estrella, s’han de canviar de color de la 1 a la 3. Pista: Es pot utilizar la virgulilla de CSS.
 
-var est = estrellas;
 
-var es1 = document.getElementById("estrella1");
-var es2 = document.getElementById("estrella2");
-var es3 = document.getElementById("estrella3");
-var es4 = document.getElementById("estrella4");
-var es5 = document.getElementById("estrella5");
+var est1 = estrella1;
+var est2 = estrella2;
+var est3 = estrella3;
+var est4 = estrella4;
+var est5 = estrella5;
 
-est.addEventListener("mouseover", function( event ) {
+est1.addEventListener("mouseover", function est1orange () {
+    est1.style.color = "#f48b29";
+});
 
-    event.target.style.color = "orange";
-
+est1.addEventListener("mouseout", function est1red () {
+    est1.style.color = "#ac0d0d";
 });
