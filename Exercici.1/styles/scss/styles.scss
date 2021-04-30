@@ -1,5 +1,7 @@
 @import "reset";
 
+// fase 1) Mostrar a pantalla 5 estrelles (o l’icona que més us agradi) centrades i amb un color assignat.
+
 body{
     display: flex;
     flex-flow: row wrap;
@@ -26,7 +28,7 @@ body{
     color: #ac0d0d;
 }
 
-// 2) Que el color de l’estrella canvi si el mouse es posa sobre d’una d’elles.
+// fase 2) Que el color de l’estrella canvi si el mouse es posa sobre d’una d’elles.
 .estrellas li:hover{
     color: #f48b29;
 }
