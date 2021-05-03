@@ -88,13 +88,13 @@ body {
 }
 
 .estrellas li {
-  margin-right: 2%;
-  margin-left: 2%;
+  padding-right: 0.5%;
+  padding-left: 0.5%;
   font-size: 7rem;
-  color: #ac0d0d;
+  color: #C0C0C0;
 }
 
 .estrellas li:hover {
-  color: #f48b29;
+  color: #FF8C00;
 }
 /*# sourceMappingURL=styles.css.map */
