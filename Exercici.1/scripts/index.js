@@ -1,141 +1,89 @@
 
-var color1 = "silver";
-var color2 = "darkorange";
-var color3 = "firebrick";
+const colors = {
+        color1 : "silver",
+        color2 : "darkorange",
+        color3 : "firebrick",
+};
 
+function asignarColor (estrella1color, estrella2color, estrella3color, estrella4color, estrella5color) {
+        estrella1.style.color = estrella1color;
+        estrella2.style.color = estrella2color;
+        estrella3.style.color = estrella3color;
+        estrella4.style.color = estrella4color;
+        estrella5.style.color = estrella5color;
+};
 
-//3) Al moure el mouse sobre un element, que canvii els cotlors a tots els seus anteriors. Si per exemple es posa el mouse a la tercera estrella, s’han de canviar de color de la 1 a la 3. Pista: Es pot utilizar la virgulilla de CSS.
-
+//3)
 
 iEstrellas.addEventListener("mouseover", function (e){
 
-    if (e.target.id != "estrella1" &&
-        e.target.id != "estrella2" &&
-        e.target.id != "estrella3" &&
-        e.target.id != "estrella4" &&
-        e.target.id != "estrella5" &&
-        estrella1.style.color != color3)
+        if (e.target.id != "estrella1" && e.target.id != "estrella2" && e.target.id != "estrella3" && e.target.id != "estrella4" && e.target.id != "estrella5" && estrella1.style.color != colors.color3) {
 
-            {estrella1.style.color = color1;
-            estrella2.style.color = color1;
-            estrella3.style.color = color1;
-            estrella4.style.color = color1;
-            estrella5.style.color = color1;
-            }
+                asignarColor (colors.color1, colors.color1, colors.color1, colors.color1, colors.color1);
 
-    if (e.target.id == "estrella1" &&
-        estrella1.style.color != color3)
+        }
+        if (e.target.id == "estrella1" && estrella1.style.color != colors.color3) {
 
-            {estrella1.style.color = color2;
-            estrella2.style.color = color1;
-            estrella3.style.color = color1;
-            estrella4.style.color = color1;
-            estrella5.style.color = color1;
-            }
+                asignarColor (colors.color2, colors.color1, colors.color1, colors.color1, colors.color1);
 
-    if (e.target.id == "estrella2" &&
-        estrella1.style.color != color3)
+        }
+        if (e.target.id == "estrella2" && estrella1.style.color != colors.color3) {
 
-            {estrella1.style.color = color2;
-            estrella2.style.color = color2;
-            estrella3.style.color = color1;
-            estrella4.style.color = color1;
-            estrella5.style.color = color1;
-            }
+                asignarColor (colors.color2, colors.color2, colors.color1, colors.color1, colors.color1);
 
-    if (e.target.id == "estrella3" &&
-     estrella1.style.color != color3)
+        }
+        if (e.target.id == "estrella3" && estrella1.style.color != colors.color3) {
 
-            {estrella1.style.color = color2;
-            estrella2.style.color = color2;
-            estrella3.style.color = color2;
-            estrella4.style.color = color1;
-            estrella5.style.color = color1;
-            }
+                asignarColor (colors.color2, colors.color2, colors.color2, colors.color1, colors.color1);
 
-    if (e.target.id == "estrella4" &&
-     estrella1.style.color != color3)
+        }
+        if (e.target.id == "estrella4" && estrella1.style.color != colors.color3) {
 
-            {estrella1.style.color = color2;
-            estrella2.style.color = color2;
-            estrella3.style.color = color2;
-            estrella4.style.color = color2;
-            estrella5.style.color = color1;
-            }
+                asignarColor (colors.color2, colors.color2, colors.color2, colors.color2, colors.color1);
 
-    if (e.target.id == "estrella5" &&
-     estrella1.style.color != color3)
+        }
+        if (e.target.id == "estrella5" && estrella1.style.color != colors.color3) {
 
-            {estrella1.style.color = color2;
-            estrella2.style.color = color2;
-            estrella3.style.color = color2;
-            estrella4.style.color = color2;
-            estrella5.style.color = color2;
-            }
+                asignarColor (colors.color2, colors.color2, colors.color2, colors.color2, colors.color2);
+
+        }
 
 });
 
-//4) Al premer una estrella, s’han de quedar els colors fixes a aquesta i totes les anteriors. Si es prem a una altra estrella, els colors s’han d’actualitzar correctament.
+//4)
 
-iEstrellas.addEventListener("click", function (e){
+iEstrellas.addEventListener("click", function (e) {
 
-    if (e.target.id != "estrella1" &&
-        e.target.id != "estrella2" &&
-        e.target.id != "estrella3" &&
-        e.target.id != "estrella4" &&
-        e.target.id != "estrella5")
+        if (e.target.id != "estrella1" && e.target.id != "estrella2" && e.target.id != "estrella3" && e.target.id != "estrella4" && e.target.id != "estrella5") {
 
-            {estrella1.style.color = color1;
-            estrella2.style.color = color1;
-            estrella3.style.color = color1;
-            estrella4.style.color = color1;
-            estrella5.style.color = color1;
-            }
+                asignarColor (colors.color1, colors.color1, colors.color1, colors.color1, colors.color1);
 
-    if (e.target.id == "estrella1")
+        }
+        if (e.target.id == "estrella1") {
 
-            {estrella1.style.color = color3;
-            estrella2.style.color = color1;
-            estrella3.style.color = color1;
-            estrella4.style.color = color1;
-            estrella5.style.color = color1;
-            }
+                asignarColor (colors.color3, colors.color1, colors.color1, colors.color1, colors.color1);
 
-    if (e.target.id == "estrella2")
+        }
+        if (e.target.id == "estrella2") {
 
-            {estrella1.style.color = color3;
-            estrella2.style.color = color3;
-            estrella3.style.color = color1;
-            estrella4.style.color = color1;
-            estrella5.style.color = color1;
-            }
+                asignarColor (colors.color3, colors.color3, colors.color1, colors.color1, colors.color1);
 
-    if (e.target.id == "estrella3")
+        }
+        if (e.target.id == "estrella3") {
 
-            {estrella1.style.color = color3;
-            estrella2.style.color = color3;
-            estrella3.style.color = color3;
-            estrella4.style.color = color1;
-            estrella5.style.color = color1;
-            }
+                asignarColor (colors.color3, colors.color3, colors.color3, colors.color1, colors.color1);
 
-    if (e.target.id == "estrella4")
+        }
+        if (e.target.id == "estrella4") {
 
-            {estrella1.style.color = color3;
-            estrella2.style.color = color3;
-            estrella3.style.color = color3;
-            estrella4.style.color = color3;
-            estrella5.style.color = color1;
-            }
+                asignarColor (colors.color3, colors.color3, colors.color3, colors.color3, colors.color1);
 
-    if (e.target.id == "estrella5")
+        }
+        if (e.target.id == "estrella5") {
 
-            {estrella1.style.color = color3;
-            estrella2.style.color = color3;
-            estrella3.style.color = color3;
-            estrella4.style.color = color3;
-            estrella5.style.color = color3;
-            }
+                asignarColor (colors.color3, colors.color3, colors.color3, colors.color3, colors.color3);
+
+        }
 
 });
 
